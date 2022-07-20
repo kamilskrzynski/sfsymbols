@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37CDA2F0288841E30020159E /* GridSymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CDA2EF288841E30020159E /* GridSymbolView.swift */; };
+		37CDA2F3288843960020159E /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CDA2F2288843960020159E /* Color+Extensions.swift */; };
+		37CDA2F52888441F0020159E /* SheetSymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CDA2F42888441F0020159E /* SheetSymbolView.swift */; };
+		37CDA2FC2888494D0020159E /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CDA2FB2888494D0020159E /* Symbol.swift */; };
+		37CDA2FE288849DD0020159E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CDA2FD288849DD0020159E /* Model.swift */; };
+		37CDA301288853A60020159E /* ByName.txt in Resources */ = {isa = PBXBuildFile; fileRef = 37CDA2FF288853A60020159E /* ByName.txt */; };
+		37CDA302288853A60020159E /* Multicolored.txt in Resources */ = {isa = PBXBuildFile; fileRef = 37CDA300288853A60020159E /* Multicolored.txt */; };
+		37CDA306288857B30020159E /* ByDefault.txt in Resources */ = {isa = PBXBuildFile; fileRef = 37CDA305288857B30020159E /* ByDefault.txt */; };
 		37CFA2932881C80000B59CA7 /* SFSymbolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CFA2922881C80000B59CA7 /* SFSymbolsApp.swift */; };
 		37CFA2952881C80000B59CA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CFA2942881C80000B59CA7 /* ContentView.swift */; };
 		37CFA2972881C80200B59CA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CFA2962881C80200B59CA7 /* Assets.xcassets */; };
@@ -14,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37CDA2EF288841E30020159E /* GridSymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSymbolView.swift; sourceTree = "<group>"; };
+		37CDA2F2288843960020159E /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		37CDA2F42888441F0020159E /* SheetSymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetSymbolView.swift; sourceTree = "<group>"; };
+		37CDA2FB2888494D0020159E /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		37CDA2FD288849DD0020159E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		37CDA2FF288853A60020159E /* ByName.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ByName.txt; sourceTree = "<group>"; };
+		37CDA300288853A60020159E /* Multicolored.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Multicolored.txt; sourceTree = "<group>"; };
+		37CDA305288857B30020159E /* ByDefault.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ByDefault.txt; sourceTree = "<group>"; };
 		37CFA28F2881C80000B59CA7 /* SFSymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFSymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37CFA2922881C80000B59CA7 /* SFSymbolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsApp.swift; sourceTree = "<group>"; };
 		37CFA2942881C80000B59CA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +48,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37CDA2F12888438B0020159E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				37CDA2F2288843960020159E /* Color+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37CDA2FA2888493C0020159E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37CDA305288857B30020159E /* ByDefault.txt */,
+				37CDA2FF288853A60020159E /* ByName.txt */,
+				37CDA300288853A60020159E /* Multicolored.txt */,
+				37CDA2FB2888494D0020159E /* Symbol.swift */,
+				37CDA2FD288849DD0020159E /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		37CFA2862881C80000B59CA7 = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +87,14 @@
 		37CFA2912881C80000B59CA7 /* SFSymbols */ = {
 			isa = PBXGroup;
 			children = (
+				37CDA2FA2888493C0020159E /* Models */,
+				37CDA2F12888438B0020159E /* Extensions */,
 				37CFA2922881C80000B59CA7 /* SFSymbolsApp.swift */,
 				37CFA2942881C80000B59CA7 /* ContentView.swift */,
 				37CFA2962881C80200B59CA7 /* Assets.xcassets */,
 				37CFA2982881C80200B59CA7 /* Preview Content */,
+				37CDA2EF288841E30020159E /* GridSymbolView.swift */,
+				37CDA2F42888441F0020159E /* SheetSymbolView.swift */,
 			);
 			path = SFSymbols;
 			sourceTree = "<group>";
@@ -126,7 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				37CFA29A2881C80200B59CA7 /* Preview Assets.xcassets in Resources */,
+				37CDA302288853A60020159E /* Multicolored.txt in Resources */,
+				37CDA306288857B30020159E /* ByDefault.txt in Resources */,
 				37CFA2972881C80200B59CA7 /* Assets.xcassets in Resources */,
+				37CDA301288853A60020159E /* ByName.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CDA2FE288849DD0020159E /* Model.swift in Sources */,
+				37CDA2F0288841E30020159E /* GridSymbolView.swift in Sources */,
 				37CFA2952881C80000B59CA7 /* ContentView.swift in Sources */,
 				37CFA2932881C80000B59CA7 /* SFSymbolsApp.swift in Sources */,
+				37CDA2F3288843960020159E /* Color+Extensions.swift in Sources */,
+				37CDA2F52888441F0020159E /* SheetSymbolView.swift in Sources */,
+				37CDA2FC2888494D0020159E /* Symbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
