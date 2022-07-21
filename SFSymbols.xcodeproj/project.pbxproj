@@ -70,6 +70,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		37CDA3092889514A0020159E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37CFA2942881C80000B59CA7 /* ContentView.swift */,
+				37CDA2EF288841E30020159E /* GridSymbolView.swift */,
+				37CDA2F42888441F0020159E /* SheetSymbolView.swift */,
+				37CDA30728894E130020159E /* SymbolCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		37CFA2862881C80000B59CA7 = {
 			isa = PBXGroup;
 			children = (
@@ -89,15 +100,12 @@
 		37CFA2912881C80000B59CA7 /* SFSymbols */ = {
 			isa = PBXGroup;
 			children = (
+				37CFA2922881C80000B59CA7 /* SFSymbolsApp.swift */,
+				37CDA3092889514A0020159E /* Views */,
 				37CDA2FA2888493C0020159E /* Models */,
 				37CDA2F12888438B0020159E /* Extensions */,
-				37CFA2922881C80000B59CA7 /* SFSymbolsApp.swift */,
-				37CFA2942881C80000B59CA7 /* ContentView.swift */,
 				37CFA2962881C80200B59CA7 /* Assets.xcassets */,
 				37CFA2982881C80200B59CA7 /* Preview Content */,
-				37CDA2EF288841E30020159E /* GridSymbolView.swift */,
-				37CDA2F42888441F0020159E /* SheetSymbolView.swift */,
-				37CDA30728894E130020159E /* SymbolCell.swift */,
 			);
 			path = SFSymbols;
 			sourceTree = "<group>";
