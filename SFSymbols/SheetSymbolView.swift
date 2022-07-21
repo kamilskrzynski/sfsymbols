@@ -15,17 +15,16 @@ struct SheetSymbolView: View {
     var body: some View {
         NavigationView {
             VStack {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.primary.opacity(0.15))
-                        .frame(width: 300, height: 210)
-                    Image(systemName: symbol.name)
-                        .font(.system(size: 100))
+                Spacer()
+                SymbolCell(symbol: symbol, isPushed: true)
+                Spacer()
+                Button {
+                    copyToClipboard()
+                } label: {
+                    Label("Copy to clipboard", systemImage: "doc.on.doc.fill")
+                        .tint(.secondary)
+                        .font(.callout)
                 }
-                Text(symbol.name)
-                    .font(.title3)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.center)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -39,6 +38,10 @@ struct SheetSymbolView: View {
                 }
             }
         }
+    }
+    
+    func copyToClipboard() {
+        UIPasteboard.general.string = self.symbol.name
     }
 }
 

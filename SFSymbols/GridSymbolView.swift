@@ -17,26 +17,7 @@ struct GridSymbolView: View {
             selectedSymbol = symbol
         } label: {
             VStack {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.primary.opacity(0.15))
-                        .frame(width: 100, height: 80)
-                    if symbol.isMulticolor {
-                        Image(systemName: symbol.name)
-                            .renderingMode(.original)
-                            .imageScale(.large)
-                            .font(.system(size: 30))
-                    } else {
-                        Image(systemName: symbol.name)
-                            .renderingMode(.template)
-                            .foregroundColor(.primary)
-                            .imageScale(.large)
-                            .font(.system(size: 30))
-                    }
-                }
-                Text(symbol.name)
-                    .font(.caption)
-                    .multilineTextAlignment(.center)
+                SymbolCell(symbol: symbol, isPushed: false)
             }
             .tint(.primary)
             .frame(width: 100, height: 110)
