@@ -33,7 +33,9 @@ struct GridSymbolView_Previews: PreviewProvider {
         GridSymbolView(symbol:
                         Symbol(
                             name: "pencil.tip.crop.circle.badge.plus",
-                            isMulticolor: false)
-    )
+                            isMulticolor: false,
+                            isVariable: true
+                        )
+        )
     }
 }

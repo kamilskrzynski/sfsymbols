@@ -11,6 +11,7 @@ enum Selection: String, CaseIterable {
     case byDefault = "Sorted by default"
     case byName = "Sorted by name"
     case multicolored = "Multicolored only"
+    case variable = "Variables"
 }
 
 class Model {
@@ -18,6 +19,7 @@ class Model {
     var symbolsSortedByDefault: [Symbol] = []
     var symbolsSortedByName: [Symbol] = []
     var multicoloredSymbols: [Symbol] = []
+    var variableSymbols: [Symbol] = []
     
     init() {
         getSymbols()
@@ -34,6 +36,8 @@ class Model {
             symbols = symbolsSortedByName
         case .multicolored:
             symbols = multicoloredSymbols
+        case .variable:
+            symbols = variableSymbols
         }
         
         if searchFilter.isEmpty {
@@ -50,17 +54,22 @@ extension Model {
         let byDefault = getSymbolsFromFile(fileName: "ByDefault")
         let byName = getSymbolsFromFile(fileName: "ByName")
         let multicolored = getSymbolsFromFile(fileName: "Multicolored")
-        
+        let variable = getSymbolsFromFile(fileName: "Variable")
+
         multicoloredSymbols = multicolored.map {
-            Symbol(name: $0, isMulticolor: true)
+            Symbol(name: $0, isMulticolor: true, isVariable: variable.contains($0))
+        }
+
+        variableSymbols = variable.map {
+            Symbol(name: $0, isMulticolor: multicolored.contains($0), isVariable: true)
         }
         
         symbolsSortedByName = byName.map {
-            Symbol(name: $0, isMulticolor: multicolored.contains($0))
+            Symbol(name: $0, isMulticolor: multicolored.contains($0), isVariable: variable.contains($0))
         }
         
         symbolsSortedByDefault = byDefault.map {
-            Symbol(name: $0, isMulticolor: multicolored.contains($0))
+            Symbol(name: $0, isMulticolor: multicolored.contains($0), isVariable: variable.contains($0))
         }
     }
     

@@ -11,6 +11,7 @@ struct SheetSymbolView: View {
     
     let symbol: Symbol
     @Environment(\.dismiss) var dismiss
+    @State private var variableValue: Double = 1
     
     var body: some View {
         NavigationView {
@@ -50,7 +51,8 @@ struct SheetSymbolView_Previews: PreviewProvider {
         SheetSymbolView(symbol:
                             Symbol(
                                 name: "pencil.tip.crop.circle.badge.plus",
-                                isMulticolor: false)
+                                isMulticolor: false,
+                                isVariable: true)
         )
     }
 }

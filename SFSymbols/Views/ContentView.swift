@@ -17,7 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            
+            VStack {
             ScrollView(showsIndicators: false) {
                 Text("Total symbols: \(viewModel.selectedSymbols(for: selection, searchFilter: search).count)")
                 LazyVGrid(columns: columns) {
@@ -43,6 +43,7 @@ struct ContentView: View {
                 }
             }
         }
+    }
     }
 }
 
