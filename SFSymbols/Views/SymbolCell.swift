@@ -23,7 +23,7 @@ struct SymbolCell: View {
                 if symbol.isMulticolor {
                     Image(systemName: symbol.name, variableValue: variableValue)
                         .renderingMode(.original)
-                        .foregroundColor(.primary)
+                        .foregroundColor(.secondary)
                         .imageScale(.large)
                         .font(.system(size: isPushed ? 90 : 30))
                 } else {
@@ -45,11 +45,12 @@ struct SymbolCell: View {
             }
         }
         .onReceive(timer) { _ in
-            if variableValue < 1.0 {
-                variableValue += 0.25
-                print(variableValue)
-            } else {
-                variableValue = 0.0
+            withAnimation {
+                if variableValue < 1.0 {
+                    variableValue += 0.25
+                } else {
+                    variableValue = 0.0
+                }
             }
         }
     }
